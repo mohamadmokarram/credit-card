@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>payment checkout</title>
+    <script src="app.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <div class="container w-full h-[100vh] flex justify-center items-center">
+      <!-- middle main box -->
+      <div
+        class="card-box bg-slate-200 rounded-xl w-[350px] max-h-[900px] overflow-auto shadow-[0_0_12px_-4px_black]">
+        <!-- card container -->
+        <div
+          class="card-box w-full h-[200px] flex flex-col glassy justify-center items-center">
+          <!-- title: You are almost there -->
+          <h2
+            class="text-center text-white font-montserat font-light mb-3 pt-2">
+            You are almost there!
+          </h2>
+
+          <!-- white card -->
+          <div
+            class="relative flex justify-center items-center w-3/4 h-[150px] bg-[#f1f1ef] mb-2 rounded-xl">
+            <!-- mastercard logo -->
+            <div class="absolute top-3 right-3 w-12">
+              <img src="icons/mastercard.svg" alt="mastercard" class="w-full" />
+            </div>
+
+            <!-- chip logo -->
+            <div class="absolute top-3 left-4 w-9">
+              <img src="icons/transparent-chip.svg" alt="" />
+            </div>
+
+            <!-- card number box -->
+            <div
+              class="card_number_box w-full flex justify-center *:inline-block *:mx-2 *:text-xl *:font-kredit *:font-semibold mt-3">
+              <span>0000</span>
+              <span>0000</span>
+              <span>0000</span>
+              <span>0000</span>
+            </div>
+
+            <!-- owner -->
+            <span
+              class="owner max-w-[150px] capitalize absolute bottom-3 left-3 font-montserat text-[12px]"
+              >card owner</span
+            >
+
+            <!-- expire date -->
+            <div
+              class="absolute w-10 flex justify-center bottom-3 right-3 font-kredit">
+              <span class="month"> </span>/
+              <span class="year"></span>
+            </div>
+          </div>
+          <!-- card end -->
+        </div>
+
+        <!-- card details -->
+        <section class="info px-10 py-5 font-montserat">
+          <h2 class="capitalize text-2xl font-bold text-slate-700">
+            card details
+          </h2>
+          <label class="label">name</label>
+          <input
+            type="text"
+            class="name_input w-full border-[2px] capitalize font-bold pt-1 border-t-0 border-x-0 border-b-slate-500/35 outline-0"
+            maxlength="40" />
+
+          <!-- card number -->
+          <label class="label mt-7">card number</label>
+          <div class="input_box flex w-full">
+            <input
+              type="tel"
+              pattern="[0-9]*"
+              class="card-number-input no-spin"
+              maxlength="4" />
+            <input
+              type="tel"
+              pattern="[0-9]*"
+              class="card-number-input no-spin"
+              maxlength="4" />
+            <input
+              type="tel"
+              pattern="[0-9]*"
+              class="card-number-input no-spin"
+              maxlength="4" />
+            <input
+              type="tel"
+              pattern="[0-9]*"
+              class="card-number-input no-spin"
+              maxlength="4" />
+          </div>
+
+          <!-- expiery date -->
+          <label class="label mt-7">expiery date</label>
+          <div class="flex w-full">
+            <input
+              type="number"
+              class="card-number-input no-spin month_input placeholder:text-[12px] placeholder:text-slate-400"
+              maxlength="2"
+              inputmode="numeric"
+              placeholder="month" />
+            <input
+              type="number"
+              class="card-number-input no-spin year_input placeholder:text-[12px] placeholder:text-slate-400"
+              maxlength="2"
+              placeholder="year" />
+          </div>
+
+          <div class="remember flex mt-7">
+            <input id="checkbox" type="checkbox" class="w-[18px]" />
+            <label
+              for="checkbox"
+              class="capitalize inline-block pl-2 text-[13px] font-semibold"
+              >remember this card</label
+            >
+          </div>
+
+          <button
+            class="w-full mb-3 relative capitalize mt-7 outline text-[14px] py-[5px] rounded-md bg-btn text-white text-left px-2 pl-8 cursor-pointer">
+            proceed
+            <span
+              class="material-symbols-outlined absolute right-2 !text-[18px] top-[5px]">
+              arrow_forward
+            </span>
+          </button>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
